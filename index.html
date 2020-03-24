@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Bruno Carvalho Feitosa"/>
+    <meta name="description" content="Aplicativo desenvolvido na MaratonaDev para cadastro de pessoas para doação de sangue")/>
+    <meta name="keywords" content="Aplicativo, MaratonaDev, Cadastro de Pessoas, Doação de Sangue")/>
+    <link rel="icon" href="/images/logo.png"/>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Doe sangue, doe vida</title>
+</head>
+<body>
+    
+    <header>
+        <img src="/images/logo.png" alt="Imagem doe sangue" />
+        <h2>A sua doação importa</h2>
+        <p>Até 2 vidas com 1 doação</p>
+        <p>Mais de 38.000 doações são necessárias todos os dias</p>
+        <p>Apenas 1,9% da população brasileira doa sangue</p>
+        <button>Quero ajudar</button>
+    </header>
+    
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="blood" placeholder="Tipo Sanguíneo" />
+            <button>Quero ajudar</button>
+        </form>
+    </section>
+    
+    <main>
+        
+        <h2>Últimos <span>doadores</span></h2>
+        <section class="b-donors">
+           {% for donor in donors %}
+            <div class="b-donors-donor">
+                <div class="b-donors-blood">{{donor.blood}}</div>    
+                <div class="b-donors-name">{{donor.name}}</div>    
+            </div>
+            {%endfor%}
+        </section>
+    </main>
+
+    <footer>
+        Desenvolvido por Bruno Carvalho Feitosa
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: #f9f9f9;
+}
+
+header img {
+    margin-top: 40px;
+    width: 400px;
+}
+
+header, main, footer {
+    text-align: center;
+}
+
+header, section.form, main {
+    margin: 0 auto 70px;
+    width: 90%;
+    max-width: 720px;
+}
+
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+h1, h2 {
+    color: #000000cc;
+}
+
+button, input {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+main h2 span {
+    color: #FF2020;
+}
+
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #FF2020;
+    font-weight: bold;
+    color: #fff;
+}
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    align-items: center;
+    background: #FF2020;
+    padding: 16px 64px;
+    border-radius: 6px;
+    transition: all 600ms;
+}
+
+section.form h2 {
+    font-size: 16px;
+    text-align: right;
+    color: #ffffffee;
+}
+
+section.form input,
+section.form button {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px ;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ffffff88;
+    border: 1ox solid ;
+}
+
+section.form input {
+    background: transparent;
+    margin-bottom: 12px;
+}
+
+section.form button {
+    font-weight: bold;
+}
+
+section.form input::placeholder {
+    color: #ffffffaa;
+}
+
+main section.b-donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.b-donors-donor {
+    margin-bottom: 40px;
+}
+
+section.b-donors .b-donors-donor .b-donors-blood {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.b-donors .b-donors-donor .b-donors-blood::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: #FF2020;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+section.b-donors .b-donors-donor .b-donors-name {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
